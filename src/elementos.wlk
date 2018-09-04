@@ -25,9 +25,7 @@ object aurora {
 	var property vive = true
 
 	method recibirAtaque(potencia) {
-		if (potencia > 10) {
-			vive = false
-		}
+		vive = potencia < 10 // si es menor que 10 sigue viva
 	}
 
 	method valorQueOtorga() = 15

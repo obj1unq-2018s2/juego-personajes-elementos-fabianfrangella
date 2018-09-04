@@ -25,8 +25,8 @@ object floki {
 			arma.registrarUso()
 		}
 	}
-	
-	method asignarArma(armaAsignada){
+
+	method asignarArma(armaAsignada) {
 		arma = armaAsignada
 	}
 
@@ -40,9 +40,7 @@ object mario {
 	method encontrar(elemento) {
 		valorRecolectado += elemento.valorQueOtorga()
 		elemento.recibirTrabajo()
-		if (valorRecolectado >= 50 || elemento.altura() > 10) {
-			esFeliz = true
-		}
+		esFeliz = (valorRecolectado >= 50 || elemento.altura() > 10)
 	// volver a ver si esto esta bien
 	}
 
