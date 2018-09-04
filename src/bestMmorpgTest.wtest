@@ -3,7 +3,7 @@ import elementos.*
 import armas.*
 
 test "luisa juega con mario" {
-	luisa.asignarPersonaje(mario)
+	luisa.personajeActivo(mario)
 	luisa.aparece(aurora)
 	luisa.aparece(castillo)
 	assert.equals(mario.esFeliz(), true)
@@ -13,9 +13,9 @@ test "luisa juega con mario" {
 
 test "luisa juega con floki y mario" {
 	floki.asignarArma(jabalina)
-	luisa.asignarPersonaje(mario)
+	luisa.personajeActivo(mario)
 	luisa.aparece(tipa)
-	luisa.asignarPersonaje(floki)
+	luisa.personajeActivo(floki)
 	luisa.aparece(aurora)
 	luisa.aparece(castillo)
 	assert.equals(mario.valorRecolectado(), 16)
@@ -26,7 +26,7 @@ test "luisa juega con floki y mario" {
 
 test "luisa juega con floki" {
 	floki.asignarArma(ballesta)
-	luisa.asignarPersonaje(floki)
+	luisa.personajeActivo(floki)
 	luisa.aparece(aurora)
 	luisa.aparece(castillo)
 	assert.equals(mario.valorRecolectado(), 0)

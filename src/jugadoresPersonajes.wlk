@@ -3,11 +3,7 @@ import armas.*
 
 object luisa {
 
-	var personajeActivo = noHayPersonaje
-
-	method asignarPersonaje(personaje) {
-		personajeActivo = personaje
-	}
+	var property personajeActivo = noHayPersonaje
 
 	method aparece(elemento) {
 		personajeActivo.encontrar(elemento)
