@@ -13,17 +13,13 @@ object luisa {
 
 object floki {
 
-	var arma
+	var property arma
 
 	method encontrar(elemento) {
 		if (arma.estaCargada()) {
 			elemento.recibirAtaque(arma.potencia())
 			arma.registrarUso()
 		}
-	}
-
-	method asignarArma(armaAsignada) {
-		arma = armaAsignada
 	}
 
 }
