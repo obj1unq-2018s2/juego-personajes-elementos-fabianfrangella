@@ -1,6 +1,36 @@
+import jugadoresPersonajes.*
+import elementos.*
+import armas.*
 
-test "testX" {
+test "luisa juega con mario" {
+	luisa.asignarPersonaje(mario)
+	luisa.aparece(aurora)
+	luisa.aparece(castillo)
+	assert.equals(mario.esFeliz(), true)
+	assert.equals(castillo.altura(), 20)
+	assert.equals(castillo.defensa(), 170)
+}
 
-	assert.that(true)
+test "luisa juega con floki y mario" {
+	floki.asignarArma(jabalina)
+	luisa.asignarPersonaje(mario)
+	luisa.aparece(tipa)
+	luisa.asignarPersonaje(floki)
+	luisa.aparece(aurora)
+	luisa.aparece(castillo)
+	assert.equals(mario.valorRecolectado(), 16)
+	assert.equals(tipa.altura(), 9)
+	assert.equals(aurora.vive(), false)
+	assert.equals(jabalina.estaCargada(), false)
+}
 
+test "luisa juega con floki" {
+	floki.asignarArma(ballesta)
+	luisa.asignarPersonaje(floki)
+	luisa.aparece(aurora)
+	luisa.aparece(castillo)
+	assert.equals(mario.valorRecolectado(), 0)
+	assert.equals(castillo.defensa(), 146)
+	assert.equals(ballesta.estaCargada(), true)
+	assert.equals(ballesta.flechas(), 8)
 }

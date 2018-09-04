@@ -1,6 +1,6 @@
 object ballesta {
 
-	var flechas = 10
+	var property flechas = 10
 
 	method estaCargada() = flechas >= 1
 

@@ -25,12 +25,16 @@ object floki {
 			arma.registrarUso()
 		}
 	}
+	
+	method asignarArma(armaAsignada){
+		arma = armaAsignada
+	}
 
 }
 
 object mario {
 
-	var valorRecolectado = 0
+	var property valorRecolectado = 0
 	var property esFeliz = false
 
 	method encontrar(elemento) {
