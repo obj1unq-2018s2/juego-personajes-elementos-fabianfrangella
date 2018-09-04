@@ -33,7 +33,6 @@ object mario {
 		valorRecolectado += elemento.valorQueOtorga()
 		elemento.recibirTrabajo()
 		esFeliz = (valorRecolectado >= 50 || elemento.altura() > 10)
-	// volver a ver si esto esta bien
 	}
 
 }
