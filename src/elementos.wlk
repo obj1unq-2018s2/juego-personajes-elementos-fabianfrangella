@@ -1,11 +1,12 @@
 object castillo {
 
-	var property altura = 20 // metros
 	var property defensa = 150
 
 	method recibirAtaque(potencia) {
 		defensa -= potencia
 	}
+
+	method altura() = 20
 
 	method valorQueOtorga() = defensa / 5
 
